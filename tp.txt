@@ -1,0 +1,18 @@
+Créer les 6 fichiers représenté sur le schéma
+- a.html
+- b.html
+- c.html
+- d.html
+- e.html
+- f.html
+
+Ajouter la structure de base sur chaque fichiers 
+- <html><head><body>
+- Ajouter le titre principal "TP HTML" (<h1> et <title>)
+- Ajouter un titre secondaire correspondant au nom du fichier (ex: <h2> Fichier C)
+
+Ajouter dans chaque fichiers les liens tel que représenté sur le schema
+
+Dans le fichier A : Ajouter un tableau avec 3 utilisateurs (colonnes Name, Email, Phone)
+Dans le fichier C : Afficher l'image => https://upload.wikimedia.org/wikipedia/commons/5/50/James_Webb_Space_Telescope.jpg
+Dans le fichier E : Afficher la liste des Fruits => Pommes, poires, bananes, kiwis

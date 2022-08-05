@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les tableaux</title>
+
+    <style>
+        table {
+            border: 5px solid red
+        }
+        .line-1 {
+            background-color: green;
+        }
+        .line-2 {
+            background-color: yellow;
+        }
+        .line-3 {
+            background-color: purple;
+        }
+        .line-3 {
+            background-color: purple;
+        }
+        .line-4 {
+            background-color: rgb(3, 163, 163);
+        }
+
+        thead {
+            background-color: brown;
+            color: aliceblue;
+        }
+        tbody {
+            background-color: rgb(183, 240, 214);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>Les tableaux</h1>
+
+    <table>
+        <tr class="line-1">
+            <td>Col 1</td>
+            <td>Col 2</td>
+            <td>Col 3</td>
+        </tr>
+        <tr class="line-2">
+            <td>Col 1</td>
+            <td>Col 2</td>
+            <td>Col 3</td>
+        </tr>
+        <tr class="line-3">
+            <td>Col 1</td>
+            <td>Col 2</td>
+            <td>Col 3</td>
+        </tr>
+        <tr class="line-4">
+            <td colspan="2">Col 1 et 2</td>
+            <td>Col 3</td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+    <br>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Table Heading</th>
+                <td>Table Data</td>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Table Heading</th>
+                <td>Table Data</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>data col 1</td>
+                <td>data col 2</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <br>
+    <br>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>john@doe.com</td>
+            </tr>
+            <tr>
+                <td>Bob</td>
+                <td>Doe</td>
+                <td>bob@doe.com</td>
+            </tr>
+            <tr>
+                <td>Jane</td>
+                <td>Doe</td>
+                <td>jane@doe.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</body>
+</html>
