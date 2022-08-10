@@ -1,51 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="2022-08-05 - description pertinante de ma page">
     <title>Structure d'un document</title>
+
+    <style>
+        section {
+            border: 5px solid red;
+        }
+        section > footer {
+            border: 5px solid green;
+        }
+
+        section > article > footer {
+            background-color: pink;
+            padding: 15px;
+        }
+    </style>
 </head>
 
 <body>
 
-
-    <header class="main-header">
-
+    <!-- Entete principal du <body> -->
+    <header>
+        entete principal du site
     </header><!-- end .main-header -->
 
+    <main>
 
-    <main class="main-content">
-
-        <h1>Titre principal du document</h1>
+        <header>
+            <h1>Titre principal du document</h1>
+        </header>
 
         <section id="section-1">
-            <h2>Titre secondaire (section 1)</h2>
+
+            <!-- Entete de <section> -->
+            <header>
+                <h2>Titre de ma section</h2>
+            </header>
 
             <article>
-                <h3>Titre tertiaire (article 1)</h3>
+                <header>
+                    <h3>Titre d'article</h3>
+                    <time datetime="2021-03-15T01:50">Publié le 15 mars 2021</time>
+                    <time datetime="2022-08-05T01:50">Editeé le 5 aout 2022</time>
+                </header>
 
+                <p>Ceci est une question ?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod explicabo doloribus nesciunt cumque delectus itaque sint excepturi, illo fugit, in saepe nemo consectetur! Esse quod optio voluptatum soluta repellat dolores!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod explicabo doloribus nesciunt cumque delectus itaque sint excepturi, illo fugit, in saepe nemo consectetur! Esse quod optio voluptatum soluta repellat dolores!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod explicabo doloribus nesciunt cumque delectus itaque sint excepturi, illo fugit, in saepe nemo consectetur! Esse quod optio voluptatum soluta repellat dolores!</p>
+
+                <footer>
+                    pied de l'article
+                    <div>
+                        John DOE - scientist volcano expert
+                    </div>
+                </footer>
+            </article>
+
+            <article>
+                <h3>truc</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod explicabo doloribus nesciunt cumque delectus itaque sint excepturi, illo fugit, in saepe nemo consectetur! Esse quod optio voluptatum soluta repellat dolores!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod explicabo doloribus nesciunt cumque delectus itaque sint excepturi, illo fugit, in saepe nemo consectetur! Esse quod optio voluptatum soluta repellat dolores!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod explicabo doloribus nesciunt cumque delectus itaque sint excepturi, illo fugit, in saepe nemo consectetur! Esse quod optio voluptatum soluta repellat dolores!</p>
+
+                <footer>
+                    pied d'article
+                </footer>
+            </article>
+
+            <article>
+
+                <h3>machin</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod explicabo doloribus nesciunt cumque delectus itaque sint excepturi, illo fugit, in saepe nemo consectetur! Esse quod optio voluptatum soluta repellat dolores!</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod explicabo doloribus nesciunt cumque delectus itaque sint excepturi, illo fugit, in saepe nemo consectetur! Esse quod optio voluptatum soluta repellat dolores!</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod explicabo doloribus nesciunt cumque delectus itaque sint excepturi, illo fugit, in saepe nemo consectetur! Esse quod optio voluptatum soluta repellat dolores!</p>
             </article>
 
-            <article>
-                <h3>Titre tertiaire (article 2)</h3>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod explicabo doloribus nesciunt cumque delectus itaque sint excepturi, illo fugit, in saepe nemo consectetur! Esse quod optio voluptatum soluta repellat dolores!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod explicabo doloribus nesciunt cumque delectus itaque sint excepturi, illo fugit, in saepe nemo consectetur! Esse quod optio voluptatum soluta repellat dolores!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod explicabo doloribus nesciunt cumque delectus itaque sint excepturi, illo fugit, in saepe nemo consectetur! Esse quod optio voluptatum soluta repellat dolores!</p>
-            </article>
-
-            <article>
-                <h3>Titre tertiaire (article 3)</h3>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod explicabo doloribus nesciunt cumque delectus itaque sint excepturi, illo fugit, in saepe nemo consectetur! Esse quod optio voluptatum soluta repellat dolores!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod explicabo doloribus nesciunt cumque delectus itaque sint excepturi, illo fugit, in saepe nemo consectetur! Esse quod optio voluptatum soluta repellat dolores!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod explicabo doloribus nesciunt cumque delectus itaque sint excepturi, illo fugit, in saepe nemo consectetur! Esse quod optio voluptatum soluta repellat dolores!</p>
-            </article>
+            <footer>
+                pied de section
+            </footer>
         </section><!-- end #section-1 -->
 
         <section id="section-2">
@@ -104,11 +143,17 @@
             </article>
         </section><!-- end #section-3 -->
 
+        <footer>
+            pied du contenu main
+        </footer>
     </main><!-- end .main-content -->
 
+    <aside>
+
+    </aside>
 
     <footer class="main-footer">
-
+        pied principal de la page
     </footer><!-- end .main-footer -->
 
 

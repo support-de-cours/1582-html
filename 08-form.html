@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire HTML</title>
+</head>
+<body>
+    
+    <div class="container">
+
+        <h1>Inscription</h1>
+
+        <p>Créer votre nouveau compte.</p>
+
+        <!-- 
+            Un formulaire se definit avec la balise <form>.
+            
+            La balise <form> possède plusieurs attributs :
+            -> l'attribut "action" (facultatif) précise l'adresse du fichier qui traitera les données du formulaire
+            -> l'attribut "method" précise la méthode de requête HTTP. prende les valeurs GET ou POST
+        -->
+        <form action="traitement.php" method="GET">
+
+            <!-- CRSF Token -->
+
+            <!-- Prénom -->
+            <div class="form-group">
+
+                <!--
+                    la balise <label> permet d'ajouter un texte qui définit l'objet du champ lié
+                    L'attribut "for" de la balise <label> permet de lier le <label> au champ <input>
+                -->
+                <label for="firstname">Prénom</label>
+
+                <!--
+                    La balise <input> définit une zone d'interaction dans le formulaire.
+
+                    -> l'attribut "type" définit le type d'interaction (text = un texte court)
+
+                    -> l'attribut "name" permet de générer la paire Clé/Valeur envoyée au serveur
+                        ex: site.com?firstname=Bobby
+
+                    -> l'attribut "id" permet de lier le champ <input> au <label>
+                -->
+                <input type="text" name="firstname" id="firstname" class="form-control">
+            </div>
+
+            <!-- Nom -->
+            <div class="form-group">
+                <label for="lastname">NOM</label>
+                <input type="text" name="lastname" id="lastname" class="form-control">
+            </div>
+
+            <!-- Genre -->
+            <div class="form-group">
+                <label for="gender">Genre</label>
+                <!-- 
+                <select name="gender" id="gender">
+                    <option value="M">Homme</option>
+                    <option value="F">Femme</option>
+                    <option value="N">Ne pas renseigner</option>
+                </select>
+                -->
+                <label>
+                    <input type="radio" name="gender" value="M"> Homme
+                </label>
+
+                <label>
+                    <input type="radio" name="gender" value="F"> Femme
+                </label>
+
+                <label>
+                    <input type="radio" name="gender" value="N"> Ne pas renseigner
+                </label>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Adresse E-mail</label>
+                <input type="email" name="email" id="email" class="form-control">
+            </div>
+
+            <!-- Telephone -->
+            <div class="form-group">
+                <label for="phone">Num. de tel.</label>
+                <input 
+                    type="tel" 
+                    name="phone" 
+                    id="phone" 
+                    class="form-control" 
+                >
+            </div>
+
+
+            <!-- Date de naissance -->
+            <div class="form-group">
+
+                <label for="birthday">Date de Naissance</label>
+                <!-- <input type="date" name="birthday" id="birthday" class="form-control"> -->
+                <!-- birthday=2022-08-10 -->
+
+                <div class="row">
+                    <div class="col">
+                        <label for="birthday_day" hidden>Jour de naissance</label>
+                        <select name="birthday[day]" id="birthday_day">
+                            <option value="1">01</option>
+                            <option value="2">02</option>
+                            <option value="31">31</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="birthday_month" hidden>Mois de naissance</label>
+                        <select name="birthday[month]" id="birthday_month">
+                            <option value="1">Jan</option>
+                            <option value="2">Fev</option>
+                            <option value="12">Dec</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="birthday_year" hidden>Année de naissance</label>
+                        <select name="birthday[year]" id="birthday_year">
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- birthday[day]=10&birthday[month]=8&birthday[year]=2022 -->
+            </div>
+
+
+            <!-- Mot de passe -->
+            <div class="form-group">
+                <label for="password">Votre nouveau mot de passe</label>
+                <input type="password" name="password" id="password">
+                <!-- password=123456 -->
+            </div>
+
+            <!-- Confirmation du mot de passe -->
+            <div class="form-group">
+                <label for="confirm_password">Confirmer le nouveau mot de passe</label>
+                <input type="password" name="confirm_password" id="confirm_password">
+                <!-- confirm=1234567 -->
+            </div>
+
+            <!-- Newsletter -->
+            <div class="form-group">
+                <label for="newsletter">
+                    <input type="checkbox" name="newsletter" id="newsletter"> J'accepte de recevoir la newsletter.
+                </label>
+            </div>
+            
+            <!-- CGU -->
+            <div class="form-group">
+                <label for="cgu">
+                    <input type="checkbox" name="cgu" id="cgu"> J'accepte le CGU.
+                </label>
+            </div>
+
+
+            <button type="submit">send</button>
+        </form><!-- Fermeture du formulaire -->
+
+    </div>
+
+</body>
+</html>

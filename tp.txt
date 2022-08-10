@@ -13,6 +13,6 @@ Ajouter la structure de base sur chaque fichiers
 
 Ajouter dans chaque fichiers les liens tel que représenté sur le schema
 
-Dans le fichier A : Ajouter un tableau avec 3 utilisateurs (colonnes Name, Email, Phone)
+Dans le fichier A : Ajouter un tableau avec 5 utilisateurs (colonnes Name, Email, Phone)
 Dans le fichier C : Afficher l'image => https://upload.wikimedia.org/wikipedia/commons/5/50/James_Webb_Space_Telescope.jpg
 Dans le fichier E : Afficher la liste des Fruits => Pommes, poires, bananes, kiwis
