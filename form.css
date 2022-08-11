@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@700&display=swap');
+
+
+/* Reset de HTML et BODY */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Appliquer une couleur sur le body */
+body {
+    background-color: #CCCCCC;
+}
+
+.container {
+    /* Appliquer une couleur sur le .container */
+    background-color: #FFFFFF;
+
+    /* Le container doit faire 500px de large */
+    width: 500px;
+
+    /* Le container doit être centré */
+    margin-left: auto;
+    margin-right: auto;
+
+    /* Marge interne de 15px à gauche te à droite */
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Titre en majuscule */
+h1 {
+    text-transform: uppercase;
+}
+
+/* Texte .lead en gris */
+.lead {
+    color: #959595;
+}
+
+/* Titre et .lead en Roboto */
+h1, .lead {
+    font-family: 'Oleo Script Swash Caps', cursive;
+}

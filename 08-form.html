@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire HTML</title>
+    <link rel="stylesheet" href="./form.css">
 </head>
 <body>
     
@@ -12,7 +13,7 @@
 
         <h1>Inscription</h1>
 
-        <p>Créer votre nouveau compte.</p>
+        <p class="lead">Créer votre nouveau compte.</p>
 
         <!-- 
             Un formulaire se definit avec la balise <form>.
@@ -20,10 +21,13 @@
             La balise <form> possède plusieurs attributs :
             -> l'attribut "action" (facultatif) précise l'adresse du fichier qui traitera les données du formulaire
             -> l'attribut "method" précise la méthode de requête HTTP. prende les valeurs GET ou POST
+            -> GET transmet les données du formulaire dans l'URL
+            -> POST transmet les données du formulaire dans l'entête de la requête
         -->
-        <form action="traitement.php" method="GET">
+        <form action="traitement.php" method="POST">
 
             <!-- CRSF Token -->
+
 
             <!-- Prénom -->
             <div class="form-group">
@@ -44,14 +48,16 @@
 
                     -> l'attribut "id" permet de lier le champ <input> au <label>
                 -->
-                <input type="text" name="firstname" id="firstname" class="form-control">
+                <input type="text" name="firstname" id="firstname" class="form-control" value="Bobby" required>
             </div>
 
+            
             <!-- Nom -->
             <div class="form-group">
-                <label for="lastname">NOM</label>
-                <input type="text" name="lastname" id="lastname" class="form-control">
+                <label for="lastname" class="required">NOM</label>
+                <input type="text" name="lastname" id="lastname" class="form-control" placeholder="Nom" required>
             </div>
+
 
             <!-- Genre -->
             <div class="form-group">
@@ -64,23 +70,25 @@
                 </select>
                 -->
                 <label>
-                    <input type="radio" name="gender" value="M"> Homme
+                    <input type="radio" name="gender" value="M" required> Homme
                 </label>
 
                 <label>
-                    <input type="radio" name="gender" value="F"> Femme
+                    <input type="radio" name="gender" value="F" required> Femme
                 </label>
 
                 <label>
-                    <input type="radio" name="gender" value="N"> Ne pas renseigner
+                    <input type="radio" name="gender" value="N" required> Ne pas renseigner
                 </label>
             </div>
+            
 
             <!-- Email -->
             <div class="form-group">
                 <label for="email">Adresse E-mail</label>
-                <input type="email" name="email" id="email" class="form-control">
+                <input type="email" name="email" id="email" class="form-control" required>
             </div>
+
 
             <!-- Telephone -->
             <div class="form-group">
@@ -104,7 +112,7 @@
                 <div class="row">
                     <div class="col">
                         <label for="birthday_day" hidden>Jour de naissance</label>
-                        <select name="birthday[day]" id="birthday_day">
+                        <select name="birthday[day]" id="birthday_day" required>
                             <option value="1">01</option>
                             <option value="2">02</option>
                             <option value="31">31</option>
@@ -112,7 +120,7 @@
                     </div>
                     <div class="col">
                         <label for="birthday_month" hidden>Mois de naissance</label>
-                        <select name="birthday[month]" id="birthday_month">
+                        <select name="birthday[month]" id="birthday_month" required>
                             <option value="1">Jan</option>
                             <option value="2">Fev</option>
                             <option value="12">Dec</option>
@@ -120,7 +128,7 @@
                     </div>
                     <div class="col">
                         <label for="birthday_year" hidden>Année de naissance</label>
-                        <select name="birthday[year]" id="birthday_year">
+                        <select name="birthday[year]" id="birthday_year" required>
                             <option value="2022">2022</option>
                             <option value="2021">2021</option>
                         </select>
@@ -130,12 +138,20 @@
             </div>
 
 
+            <!-- Biographie -->
+            <div class="form-group">
+                <label for="bio">Votre Biographie</label>
+                <textarea name="biography" id="bio" class="form-control"></textarea>
+            </div>
+
+
             <!-- Mot de passe -->
             <div class="form-group">
                 <label for="password">Votre nouveau mot de passe</label>
-                <input type="password" name="password" id="password">
+                <input type="password" name="password" id="password" required>
                 <!-- password=123456 -->
             </div>
+
 
             <!-- Confirmation du mot de passe -->
             <div class="form-group">
@@ -144,6 +160,7 @@
                 <!-- confirm=1234567 -->
             </div>
 
+
             <!-- Newsletter -->
             <div class="form-group">
                 <label for="newsletter">
@@ -151,15 +168,32 @@
                 </label>
             </div>
             
+
             <!-- CGU -->
             <div class="form-group">
                 <label for="cgu">
-                    <input type="checkbox" name="cgu" id="cgu"> J'accepte le CGU.
+                    <input type="checkbox" name="cgu" id="cgu" required> J'accepte le CGU.
                 </label>
             </div>
 
 
-            <button type="submit">send</button>
+
+            <!-- Bouton simple est associé à une action JS -->
+            <!-- <button type="button">Bouton simple</button> -->
+            <!-- <input type="button" value="Bouton simple"> -->
+            
+            <br>
+
+            <!-- Bouton Reset : remet un formulaire dans son etat initial -->
+            <button type="reset">Bouton de réinitialisation du form</button>
+            <!-- <input type="reset" value="Bouton de réinitialisation du form"> -->
+            
+            <br>
+
+            <!-- Bouton submit envoie les données du form au serveur -->
+            <button type="submit">Bouton de soumission du form</button> 
+            <!-- <input type="submit" value="Bouton de soumission du form"> -->
+            
         </form><!-- Fermeture du formulaire -->
 
     </div>
